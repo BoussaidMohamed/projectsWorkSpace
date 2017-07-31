@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'alias_name'
+            keyPassword 'nAdA20$$'
+            storeFile file('/Users/mohamed/workspace/gitWorkSpace/projectsWorkSpace/Keys/my-release-key.keystore')
+            storePassword 'nAdA20$$'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "taginstore.apackage.com.pokemonandroid"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    implementation 'com.google.android.gms:play-services-maps:11.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
+}
