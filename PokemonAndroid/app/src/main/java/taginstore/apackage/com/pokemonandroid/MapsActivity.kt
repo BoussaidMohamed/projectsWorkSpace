@@ -156,12 +156,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         for (i in 0..listOfPokemon.size - 1) {
                             var newPokemon = listOfPokemon[i]
                             if (newPokemon.isCatched == false) {
-                                val pokemonPosition = LatLng(newPokemon.lat!!, newPokemon.longi!!)
+                                val pokemonPosition = LatLng(newPokemon.location!!.latitude, newPokemon.location!!.longitude)
                                 mMap.addMarker(MarkerOptions()
                                         .position(pokemonPosition)
                                         .title(newPokemon.name!!)
-                                        .snippet(newPokemon.desc!!)
+                                        .snippet(newPokemon.desc!! +" Power:"+newPokemon.power!!)
                                         .icon(BitmapDescriptorFactory.fromResource(newPokemon.image!!)))
+
+                                if (location!!.distanceTo(newPokemon.location)<2){
+                                    newPokemon.isCatched = true
+                                    listOfPokemon[i] = newPokemon
+                                    playerPower += newPokemon.power!!
+                                    Toast.makeText(getApplicationContext(),newPokemon.name + "is catched. And your new power is "+playerPower,Toast.LENGTH_LONG).show()
+                                }
 
                             }
                         }
@@ -177,10 +184,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     var listOfPokemon = ArrayList<Pokemon>()
+    var playerPower = 0.0
     fun loadPokemon() {
-        listOfPokemon.add(Pokemon(R.drawable.charmander2, "Charmander", "Pokemon of fire", 109.22, 48.803379, 2.057181))
-        listOfPokemon.add(Pokemon(R.drawable.bulbasaur2, "Bulbasaur", "Pokemon of Earth", 99.22, 48.803399, 2.057866))
-        listOfPokemon.add(Pokemon(R.drawable.squirtle, "Squirtle", "Pokemon of Water", 107.22, 48.803379, 2.059153))
+        listOfPokemon.add(Pokemon(R.drawable.charmander2, "Charmander", "Pokemon of fire", 109.22, 48.870780, 2.231397))
+        listOfPokemon.add(Pokemon(R.drawable.bulbasaur2, "Bulbasaur", "Pokemon of Earth", 99.22, 48.871194, 2.232526))
+        listOfPokemon.add(Pokemon(R.drawable.squirtle, "Squirtle", "Pokemon of Water", 107.22, 48.872128, 2.233555))
     }
 
 }

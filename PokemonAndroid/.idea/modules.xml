@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PokemonAndroid.iml" filepath="$PROJECT_DIR$/PokemonAndroid.iml" />
+      <module fileurl="file://D:\AndroidProjects\projectsWorkSpace\PokemonAndroid\PokemonAndroid.iml" filepath="D:\AndroidProjects\projectsWorkSpace\PokemonAndroid\PokemonAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\AndroidProjects\projectsWorkSpace\PokemonAndroid\app\app.iml" filepath="D:\AndroidProjects\projectsWorkSpace\PokemonAndroid\app\app.iml" />
     </modules>
   </component>
 </project>
