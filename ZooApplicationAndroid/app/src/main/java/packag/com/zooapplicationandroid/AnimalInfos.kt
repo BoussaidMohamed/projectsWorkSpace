@@ -16,7 +16,7 @@ class AnimalInfos : AppCompatActivity() {
         val image=bundle.getInt("image")
 
         ivAnimalImage.setImageResource(image)
-        tvName.text=name
-        tvDescreption.text=desc
+        tvAnimalName.text = name
+        tvAnimalsDetails.text=desc
     }
 }
