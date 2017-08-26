@@ -4,10 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:background="@color/grey"
     tools:context="taginstore.packag.com.foodapp.MainActivity">
 
     <GridView
+        android:horizontalSpacing="5pt"
+        android:verticalSpacing="5pt"
+        android:columnWidth="65pt"
+        android:numColumns="auto_fit"
+        android:id="@+id/gv_foodApp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"/>
 </LinearLayout>
