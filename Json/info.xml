@@ -1,0 +1,24 @@
+<infos>
+<Name>Mohamed</Name>
+<Age>29</Age>
+<Languages>
+	<item>Android</item>
+	<item>Java</item>
+	<item>C#</item>
+</Languages>
+
+<Jobs>
+	<item>
+		<Title>Developper</Title>
+		<Place>NYC</Place>
+	</item>
+	<item>
+		<Title>Tester</Title>
+		<Place>CA</Place>
+	</item>
+	<item>
+		<Title>Manager</Title>
+		<Place>FL</Place>
+	</item>
+</Jobs>
+</infos>

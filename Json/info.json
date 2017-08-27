@@ -1,0 +1,9 @@
+{
+	"name":"Mohamed",
+	"Age":27,
+	"Languages":["Android","Java","C#"],
+	"Jobs":[{"Place":"NYC", "Title":"Developper"},
+			{"Place":"CA", "Title":"Tester"},
+			{"Place":"FL", "Title":"Manager"},
+	        ]
+}
